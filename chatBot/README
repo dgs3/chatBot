@@ -1,0 +1,41 @@
+ChatBot resurrects a deceased person through datamining their information on the internet
+
+A chat is a correspondence between person A (the deceased) and person B, the partner.  When the two persons chat, there are two situations we have to consider:
+	Person A initiates conversation towards person B
+	Person B initiates conversation towards person A
+This chatbot is based on cause effect, where the user is always Person B.  The string queried to the bot is compared to all strings owned by Person B, and Person A's proper response is returned.
+
+For version 0.0, we are going to just have each statement said by person B point to a statement said by Person A.  We are going to use a standard python dictionary first, due to its simplicity and power.  All keys are Person B's statements, and all Values are Person A's responses.  When the user types in a string, that string is first compared to all Values in the dic to see if a substring exists.  If that substring does exist, we return the response.  If no substring exists, we then find the closest edit distance and return that value.
+
+	input = personB.input
+	editDistanceMap = [tuples.size]
+	bestHammingDistance = maxInt
+	bestHammingDistanceIndex = -1
+	for query in tuples.keys():
+		if hammingDistance(input, query) < bestHammingDistance:
+			bestHammingDistanceIndex = tuples.keys().index(query)
+		if input is a substring of query:
+			return tuples[query]
+	return tuples[tuples.keys()[bestHammingDistanceIndex]
+		
+	bodyTag = "cli:body"
+
+	currIndex = 0
+	nextMessage = getNextSpecificTag(convo, "cli:message", currIndex)
+	currIndex += len(nextMessage)
+	if email in getTagAttribute(nextMessage[0], "to")
+		query = getSandwitch(convo, "cli:body", currIndex)
+		currIndex+=len(bodyTag)*2 + 5 + len(query)
+	else
+		response = getSandwitch(convo, "cli:body", currIndex)
+		currIndex+=len(BodyTag*2 + 5 + len(query)
+	
+
+While those are the two base situations, there are several cases which need to be considered.
+	Person X has multiple lines of chatter before Person~X responds
+	Person X has mulitple lines of chatter without Person~X responding
+
+Do to the above, each query object is actually going to be a list of queries and we compare all objects in the list
+
+
+For version 0.1, consider using a graphical representation using timestamps to gauge actual conversations to give them a flow.  If a query has a sub-minimal hamming distance to a node that is proximate to a pervious conversation, we return the closer node.
